@@ -1,0 +1,4 @@
+.vs/*
+*.opendb
+Debug/*
+enc_temp_folder/*
