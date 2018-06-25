@@ -1,6 +1,6 @@
 .vs/*
 *.opendb
-Debug/*
+*Debug/*
 enc_temp_folder/*
-basic-cplusplus/Debug/*
-basic-cplusplus/Debug/
+*basic-cplusplus/Debug/*
+*basic-cplusplus/Debug/
