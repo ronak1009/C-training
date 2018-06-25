@@ -1,6 +1,6 @@
 void f() {
 	//a is local variable to this function
-	// scope and lifetime of local variable is limited to the block where it's defined.
+	// scope and lifetime of non-static local variable is limited to the block where it's defined.
 	//location of local variable is stack frame of stack.                             
 	int a = 5;
 }
