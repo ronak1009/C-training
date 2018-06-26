@@ -7,12 +7,12 @@ Write a program that sorts integers in an array in ascending order.
 #include <stdlib.h>
 #include <time.h>
 
-#define SIZE 5
+#define SIZE 10
 
 void comparisonSort(int arr[]) {
 	int temp;
 	for (int i = 0; i < SIZE; i++) {
-		for (int j = 1; j < SIZE; j++) {
+		for (int j = i+1; j < SIZE; j++) {
 			if (arr[i] > arr[j]) {
 				temp = arr[j];
 				arr[j] = arr[i];
@@ -34,5 +34,4 @@ int main() {
 	for (int i = 0; i < SIZE; printf("%d ", a[i]), i++);
 	printf("\n");
 	comparisonSort(a);
-
 }
