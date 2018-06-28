@@ -10,4 +10,6 @@ Release/*
 *.filters
 *.obj
 *.exp
+*.dll
+*.lib
 
