@@ -6,3 +6,10 @@ enc_temp_folder/*
 *basic-cplusplus/Debugi/
 *basic-cplusplus/Release/*
 Release/*
+*.exe
+*.filters
+*.obj
+*.exp
+*.dll
+*.lib
+
