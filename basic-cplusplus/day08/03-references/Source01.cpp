@@ -4,3 +4,12 @@ int main() {
 	i = i + 1;
 	j = j + 2;
 }
+
+/*
+j = reference
+i = referent
+
+	-----
+ i	| 1	| j
+	-----
+*/

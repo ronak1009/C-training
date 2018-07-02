@@ -2,7 +2,7 @@
 
 int main() {
 	int count = 20;
-	//storing the continous mem block having size ( 4 x 2 = 8 bytes) --> dynamic array
+	//storing the continous mem block having size ( 4 x 20 = 80 bytes) --> dynamic array
 	int *pn = (int *)malloc(sizeof(int) * count);
 	pn[0] = 10;
 	pn[1] = -10;

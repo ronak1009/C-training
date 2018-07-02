@@ -14,8 +14,8 @@ int main() {
 2.	not a keyword, function name			its a C++ keyword
 ------------------------------------------------------
 3.	need to specify the size to reserve		calculates the size it requires to reserve
-	(no of bytes to be reserved				(number of bytes to be reserved is passed 
-	is to be specified by developer)		automatically to new by compiler)
+	(no of bytes to be reserved				(number of bytes to be reserved is calculate 
+	is to be specified by developer)		by compiler)
 ------------------------------------------------------
 4.	explicit type casting is required		type casting happens implicity
 ------------------------------------------------------

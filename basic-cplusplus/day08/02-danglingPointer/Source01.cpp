@@ -1,7 +1,7 @@
 int main() {
 	int *pa = new int;
 	*pa = 1;
-	int * pb = pa;
+	int * pb = pa;	 //pass by value i.e. address stored in pa is copied as value to pb, pb now becomes pointer to same mem location
 	delete pa;
 	pa = nullptr;
 }
