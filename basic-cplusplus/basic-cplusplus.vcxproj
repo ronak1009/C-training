@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="day08\NewFolder1\Source01.cpp" />
+    <ClCompile Include="day07\practice\Source01.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{15697538-B09C-49BB-8C54-D78A290549DB}</ProjectGuid>

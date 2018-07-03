@@ -9,18 +9,20 @@ with basic matrix multiplication rule i.e a(i, j), b(m,n) => j = m.
 #define M 3
 #define N 3
 
-int main() {
-	int a[I][J] = { 0 };
-	int b[M][N] = { 0 };
+int** matrixMultiply(int *a, const int i, const int j, const int *b[], const int m, const int n);
 
-	int result[I][N] = { 0 };
+int main() {
+	//input 2-D arrays
+	int **a;
+	int **b;
+	int **result = matrixMultiply(a[0], I, J, &b, M ,N);
 
 }
 
-int* matrixMultiply(const int *a, const int i, const int j, const int *b, const int m, const int n) {
+int** matrixMultiply(int *a, const int i, const int j, const int *b[], const int m, const int n) {
 	if (j != m) //matrix multiplication is not allowed
 		return nullptr;
-	
+	int **result = new int*[i];
 	for (int row = 0; row < i; row++) {
 	
 		for (int colm = 0; colm < n; colm++) {
@@ -29,3 +31,8 @@ int* matrixMultiply(const int *a, const int i, const int j, const int *b, const 
 	}
 	
 }
+/*
+difficulties:
+1. you cannot pass multi-dimension array as int a[][]. You need to give no of columns.
+ To 
+*/
