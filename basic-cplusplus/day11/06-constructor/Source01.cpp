@@ -37,4 +37,6 @@ on its own.
 6. there are different types of constructor - non-parametric, parametric, copy
 7. constructors are used to initialize an object i.e. just after the allocation of memory, you get control of initializing your object
 and prevent it from containing random/garbage value.
+8. for constructor to come into existence, it should be defined with public access.
+
 */
