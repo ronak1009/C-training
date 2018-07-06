@@ -12,4 +12,6 @@ Release/*
 *.exp
 *.dll
 *.lib
+*.vcxproj
+*.vcxproj.user
 
