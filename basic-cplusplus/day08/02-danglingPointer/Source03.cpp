@@ -13,13 +13,14 @@ int main() {
 }
 
 /*
+---continued of source02.cpp---
 Another example of poor programming practice.
 The mem reserved in the heap is not deleted.
 
 to solve:
 1. delete pn in the function scope of 'f';
 2. change the f to return the address of newly reserved mem location and in the main, use delete on the address returned.
-3. change is seen in this prograM
+3. change is seen in this prograM i.e. using double pointers as arguments, as we are passing pointer to a pointer
 
 when we are passing address of a pointer than we have to use double pointer.
 

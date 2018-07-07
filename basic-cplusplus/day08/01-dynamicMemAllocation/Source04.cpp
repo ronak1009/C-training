@@ -10,3 +10,8 @@ int main() {
 	delete[] n1;
 	n1 = new int[5];
 }
+/*
+malloc, realloc, free
+
+new, delete
+*/
