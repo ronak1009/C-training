@@ -74,5 +74,32 @@ bool List::empty() const {
 	return m_size == 0;
 }
 void List::sort() {
-
+	//create a dyamic array of node objects
+	Node **nodeList = new Node*[m_size];
+	Node *iterator = m_pHead;
+	//populate the nodeList array with addresses of all the nodes present in the list
+	for (int index = 0; index < m_size; index++) {
+		*(nodeList + index) = iterator;
+		iterator = iterator->m_pNext;
+	}
+	//sorting the nodeList
+	for (int i = 0; i < m_size-1; i++) {
+		for (int j = i; j < m_size; i++) {
+			if (nodeList[i]->m_data < nodeList[j]->m_data)
+			{
+				//swap as the nodes
+				Node *temp = nodeList[i];
+				nodeList[i] = nodeList[j];
+				nodeList[j] = temp;
+			}
+		}//inner for
+	}//outer for
+	
+	//Nodelist array is now sorted, so re-establish the links correctly
+	m_pHead = nodeList[0];
+	for (int i = 1; i < m_size-1; i++) {
+		nodeList[i]->m_pNext = nodeList[i + 1];
+	}
+	nodeList[m_size-1]->m_pNext = nullptr;
+	m_pTail = nodeList[m_size-1];
 }
