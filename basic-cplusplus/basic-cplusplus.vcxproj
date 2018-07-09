@@ -19,7 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="day13\02-aggregation\Source01.cpp" />
+    <ClInclude Include="day13\practice\List.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="day13\practice\List.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{15697538-B09C-49BB-8C54-D78A290549DB}</ProjectGuid>
