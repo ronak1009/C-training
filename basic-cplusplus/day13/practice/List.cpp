@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "List.h"
 //default constructor
 List::List()
@@ -36,7 +37,7 @@ void List::push_back(int data) {
 	pn->m_data = data;
 	pn->m_pNext = nullptr;
 	if (0 == m_size)
-		m_pHead = m_pTail;
+		m_pHead = pn;
 	else
 		m_pTail->m_pNext = pn; //make the tail element point to the new node created
 	m_pTail = pn;
@@ -73,33 +74,37 @@ unsigned List::size() const {
 bool List::empty() const {
 	return m_size == 0;
 }
+
 void List::sort() {
-	//create a dyamic array of node objects
-	Node **nodeList = new Node*[m_size];
-	Node *iterator = m_pHead;
-	//populate the nodeList array with addresses of all the nodes present in the list
-	for (int index = 0; index < m_size; index++) {
-		*(nodeList + index) = iterator;
-		iterator = iterator->m_pNext;
-	}
-	//sorting the nodeList
-	for (int i = 0; i < m_size-1; i++) {
-		for (int j = i; j < m_size; i++) {
-			if (nodeList[i]->m_data < nodeList[j]->m_data)
-			{
-				//swap as the nodes
-				Node *temp = nodeList[i];
-				nodeList[i] = nodeList[j];
-				nodeList[j] = temp;
+	//swap the data member. Here there is only one data member so its simple
+	int temp;
+	Node *pIterator = m_pHead;
+	while (pIterator->m_pNext) {
+		Node *nextNode = pIterator->m_pNext;
+		//bubble sort implementation
+		while (nextNode) {
+			if (pIterator->m_data > nextNode->m_data) {
+				temp = pIterator->m_data;
+				pIterator->m_data = nextNode->m_data;
+				nextNode->m_data = temp;
 			}
-		}//inner for
-	}//outer for
-	
-	//Nodelist array is now sorted, so re-establish the links correctly
-	m_pHead = nodeList[0];
-	for (int i = 1; i < m_size-1; i++) {
-		nodeList[i]->m_pNext = nodeList[i + 1];
+			nextNode = nextNode->m_pNext;
+		}
+		pIterator = pIterator->m_pNext;
 	}
-	nodeList[m_size-1]->m_pNext = nullptr;
-	m_pTail = nodeList[m_size-1];
+}
+
+void List::merge(List l) {
+	m_pTail->m_pNext = l.m_pHead;
+	m_pTail = l.m_pTail;
+}
+
+void List::PrintList() const {
+	Node *pIterator = m_pHead;
+	while (pIterator)
+	{
+		printf("%d  ", pIterator->m_data);
+		pIterator = pIterator->m_pNext;
+	}
+	printf("\n");
 }
